@@ -1,0 +1,38 @@
+.box
+    display: flex
+    flex-direction: column
+    background: #2d2d2d
+    align-items: center
+    justify-content: center
+    height: calc( 100vh - 400px )
+    padding: 50px
+
+    h1
+        color: #FFF
+
+    form
+        display: flex
+        flex-direction: column
+
+        input
+            background: none
+            border: none
+            color: #FFF
+            text-align: center
+            width: 320px
+            height: 30px
+            border: 1px solid #FFF
+            margin: 10px 5px
+            border-radius: 5px
+            font-size: 16px
+
+        input:focus-visible
+            outline: none !important
+
+        .login:focus
+            border-color: #db2121
+
+        custom-button
+            display: flex
+            align-items: center
+            justify-content: center

@@ -1,0 +1,8 @@
+<div class="box">
+    <h1>Digite as suas credenciais</h1>
+    <form [formGroup]="form" (submit)="submit()">
+        <input id="email" placeholder="E-mail" class="login" formControlName="email">
+        <input id="password" type="password" placeholder="Senha" class="login" formControlName="password">
+        <custom-button type="submit" [text]="'Login'" [class]="'common login'"></custom-button>
+    </form>
+</div>

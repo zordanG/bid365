@@ -1,0 +1,16 @@
+<div class="container">
+    <section class="carousel">
+        <h1> O seu site de leilões de bovinos! </h1>
+        <carousel [images]="images"></carousel>   
+    </section>
+    <section class="leilao">
+        <h2> Leilões ao vivo </h2>
+        <span class="line"></span>
+        <item-box [leiloes]="leiloesLive"></item-box>
+    </section>
+    <section class="leilao">
+        <h2> Próximos leilões </h2>
+        <span class="line"></span>
+        <item-box [leiloes]="leiloesSoon"></item-box>
+    </section>
+</div>

@@ -1,0 +1,28 @@
+<section>
+    <div *ngFor="let leilao of leiloes; let i=index" class="container">
+        <div *ngIf="leilao.status == 'Live'" class="live">
+            <img src="{{leilao.image}}">
+            <div class="info">
+                <h1>{{leilao.name}}</h1>
+                <h2>{{leilao.city}}</h2>
+                <custom-button [text]="'Ao Vivo'" [class]="'live'" [routerLink]="'/login'"></custom-button>
+            </div>
+        </div>
+        <div *ngIf="leilao.status == 'Soon'" class="soon">
+            <div class="soon-image">
+                <img src="{{leilao.image}}">
+                <p> {{leilao.day}} {{leilao.month}}. {{leilao.time}} </p>
+            </div>
+            <div *ngIf="leilao.showContact == false"class="info">
+                <h1>{{leilao.name}}</h1>
+                <h2>{{leilao.city}}</h2>
+                <custom-button [text]="'Mais Informações'" [class]="'info'" (click)="showContact(i)"></custom-button>
+            </div>
+            <div *ngIf="leilao.showContact == true" class="info">
+                <h1>{{leilao.contact}}</h1>
+                <h2>{{leilao.phone}}</h2>
+                <custom-button [text]="'Menos Informações'" [class]="'info'" (click)="showContact(i)"></custom-button>
+            </div>
+        </div>
+    </div>
+</section>

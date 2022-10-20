@@ -1,0 +1,13 @@
+<div class="box">
+    <h1>Digite os seus dados</h1>
+    <form [formGroup]="form" (submit)="submit()">
+        <input id="name" placeholder="Nome" class="sign-up" formControlName="name">
+        <input id="email" placeholder="E-mail" class="sign-up" formControlName="email">
+        <div class="double-items">
+            <input id="password" placeholder="Senha" class="sign-up half-size" formControlName="password" type="password">
+            <input id="password-confirm" placeholder="Confirmar Senha" class="sign-up half-size" type="password">
+        </div>
+        <input id="phone" placeholder="Telefone" class="sign-up" formControlName="phone" type="string">
+        <custom-button type="submit" [text]="'Sign-up'" [class]="'common sign-up'"></custom-button>
+    </form>
+</div>
